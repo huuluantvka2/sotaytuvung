@@ -1,0 +1,44 @@
+ion-header {
+    ion-searchbar {
+        padding: 0px 8px;
+    }
+    ion-button {
+        ion-icon {
+            color: black;
+        }
+    }
+    .add-word {
+        --background: transparent !important;
+        text-align: center;
+        ion-button {
+            --background: #f757ae;
+            height: 40px;
+            ion-icon {
+                color: white;
+            }
+            --background-activated: #fe32a1;
+        }
+    }
+}
+ion-content {
+    ion-item {
+        font-size: 1rem;
+        --background: #ffffffc7;
+        border-radius: 8px;
+        ion-label {
+            padding: 0 4px;
+            .enWord {
+                font-size: 1rem;
+                color: black;
+                text-transform: capitalize;
+                padding: 0 8px;
+            }
+            .vnWord {
+                font-size: 0.9rem;
+                color: gray;
+                text-transform: capitalize;
+                padding: 0 8px;
+            }
+        }
+    }
+}

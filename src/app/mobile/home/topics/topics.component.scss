@@ -1,0 +1,30 @@
+ion-header {
+    ion-icon {
+        font-size: 1.8rem;
+    }
+}
+ion-content {
+    .topic {
+        display: flex;
+        justify-content: center;
+        &-square {
+            width: 38vw;
+            height: 38vw;
+            border: 1.5px solid deeppink;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #5d5c5f47;
+            color: white;
+            font-size: 1rem;
+            font-weight: 500;
+            padding: 5px;
+        }
+    }
+}
+
+.ripple-parent {
+    position: relative;
+    overflow: hidden;
+}

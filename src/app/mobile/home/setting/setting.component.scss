@@ -1,0 +1,28 @@
+ion-content {
+    ion-grid {
+        background: #ffffffc7;
+        margin-top: 10px;
+        border-radius: 12px;
+        padding: 0;
+        ion-item {
+            --background: transparent !important;
+            padding: 0 8px;
+        }
+        ion-icon {
+            font-size: 1.2rem;
+            margin-left: 5px;
+            color: deeppink;
+        }
+        ion-label {
+            margin-top: 10px;
+        }
+        .author {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            background: #e3d2d8a6;
+            padding: 10px;
+            border-radius: 12px;
+        }
+    }
+}

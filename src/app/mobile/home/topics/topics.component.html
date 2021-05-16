@@ -1,0 +1,22 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar>
+        <ion-buttons slot="end">
+            <ion-button (click)="addTopic()">
+                <ion-icon class="vh-dark" name="add-outline"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+        <ion-title mode="ios">Chủ đề</ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-grid fixed>
+        <ion-row>
+            <ion-col *ngFor="let item of topicsShow" class="topic" size="6">
+                <div (click)="openActionSheet(item)" class="topic-square ion-activatable ripple-parent">
+                    {{item.topic}}
+                    <ion-ripple-effect></ion-ripple-effect>
+                </div>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

@@ -1,0 +1,34 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button mode="md"></ion-back-button>
+        </ion-buttons>
+        <ion-title mode="ios">Chi tiết từ vựng</ion-title>
+        <ion-buttons style="margin-top: 6px;" slot="end">
+            <ion-button [disabled]="wordForm.invalid" (click)="deleteWord()">
+                <ion-icon name="trash-outline"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-grid fixed>
+        <form [formGroup]="wordForm">
+            <ion-item lines="none">
+                <ion-label position="fixed">Nhập từ</ion-label>
+                <ion-input (ionBlur)="updateWord({enWord : wordForm.value.enWord})" class="ion-text-end"
+                    formControlName="enWord" mode="ios"></ion-input>
+            </ion-item>
+            <ion-item lines="none">
+                <ion-label position="fixed">Nghĩa</ion-label>
+                <ion-input (ionBlur)="updateWord({vnWord : wordForm.value.vnWord})" class="ion-text-end"
+                    formControlName="vnWord" mode="ios"></ion-input>
+            </ion-item>
+            <ion-item lines="none">
+                <ion-label position="fixed">Ví dụ</ion-label>
+                <ion-input (ionBlur)="updateWord({example : wordForm.value.example})" class="ion-text-end"
+                    formControlName="example" mode="ios"></ion-input>
+            </ion-item>
+        </form>
+    </ion-grid>
+</ion-content>

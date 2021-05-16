@@ -1,0 +1,16 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar>
+        <ion-title mode="ios">Cài đặt</ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content style="background: transparent;">
+    <ion-grid>
+        <ion-item lines="none" class="ion-no-padding">
+            <ion-label (click)="open()">Thay đổi nền
+            </ion-label>
+            <ion-icon name="color-filter-outline"></ion-icon>
+        </ion-item>
+        <div class="author">Author: Hữu Luân</div>
+    </ion-grid>
+</ion-content>
+<input style="opacity: 0; visibility: hidden;" #imageInput type="file" accept="image/*" (change)="onSelectFile($event)">

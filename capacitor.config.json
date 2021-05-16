@@ -1,0 +1,13 @@
+{
+  "appId": "com.example.app",
+  "appName": "Từ vựng",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "dist/newwords",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "cordova": {}
+}

@@ -1,0 +1,50 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar mode="ios">
+        <ion-buttons slot="start">
+            <ion-back-button mode="md"></ion-back-button>
+        </ion-buttons>
+        <ion-title *ngIf="!showSearch">{{topic.topic}}</ion-title>
+        <ion-buttons style="margin-top: 6px;" *ngIf="!showSearch" slot="end">
+            <ion-button (click)="showSearch = !showSearch">
+                <ion-icon name="search-outline"></ion-icon>
+            </ion-button>
+            <ion-button (click)="openSort()">
+                <ion-icon name="funnel-outline"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+        <ion-searchbar (ionChange)="searchWord($event.target.value)" *ngIf="showSearch" (ionCancel)="cancelSearch()"
+            debounce="500" showCancelButton="always" cancelButtonText="Hủy" animated placeholder="Tìm kiếm từ vựng">
+        </ion-searchbar>
+
+    </ion-toolbar>
+    <ion-toolbar class="add-word" mode="ios">
+        <ion-button (click)="addWord()">
+            <ion-icon name="add-outline"></ion-icon>
+            Thêm từ
+        </ion-button>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-grid class="ion-no-padding">
+        <ion-row>
+            <ion-col size="12">
+                <ion-item (click)="gotoDetail(item)" *ngFor="let item of list_words_show" detail
+                    class="ion-no-padding ion-activatable ripple-parent">
+                    <ion-label>
+                        <div class="enWord">{{item.enWord}}</div>
+                        <div class="vnWord">{{item.vnWord}}</div>
+                    </ion-label>
+                    <ion-ripple-effect></ion-ripple-effect>
+                </ion-item>
+                <!-- <ion-virtual-scroll [items]="list_words">
+                    <ion-item *virtualItem="let item" detail class="ion-no-padding">
+                        <ion-label>
+                            <div class="enWord">{{item.enWord}}</div>
+                            <div class="vnWord">{{item.vnWord}}</div>
+                        </ion-label>
+                    </ion-item>
+                </ion-virtual-scroll> -->
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>
